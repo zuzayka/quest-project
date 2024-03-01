@@ -1,3 +1,4 @@
+
 package org.mycompany.model;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;

@@ -8,6 +8,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>quest-project</name>
 
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>20</maven.compiler.target>

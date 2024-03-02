@@ -1,4 +1,3 @@
-
 package org.mycompany.servlets;
 
 import jakarta.servlet.http.HttpServletRequest;

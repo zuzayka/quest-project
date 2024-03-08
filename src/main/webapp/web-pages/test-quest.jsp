@@ -421,7 +421,7 @@
                 $.ajax({
                 url: "/quest-project/test-quest",
                 type: "POST",
-                data: { param: clicked_id, param2: hid.value - 1},
+                data: { paramClick: clicked_id, paramHiddenPatience: hid.value - 1},
                     success: function(resp) {
                         // Обработка успешного ответа
                         console.log("Data from servlet:", resp);

@@ -1,7 +1,11 @@
 package org.mycompany.entities;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+@Setter
+@Getter
 public class User {
     private final static int START_PATIENCE = 30;
     private final static int START_TEST_KEY = 0;
@@ -24,38 +28,6 @@ public class User {
         this.name = name;
         this.patience = START_PATIENCE;
         this.testKey = START_TEST_KEY;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public int getPatience() {
-        return patience;
-    }
-
-    public void setPatience(int patience) {
-        this.patience = patience;
-    }
-
-    public int getTestKey() {
-        return testKey;
-    }
-
-    public void setTestKey(int testKey) {
-        this.testKey = testKey;
     }
 
     @Override
@@ -88,5 +60,10 @@ public class User {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (password != null ? password.hashCode() : 0);
         return result;
+    }
+
+    public static void main(String[] args) {
+        User user = new User("Vasya");
+        System.out.println(user.getName());
     }
 }

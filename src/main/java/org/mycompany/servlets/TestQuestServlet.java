@@ -50,11 +50,11 @@ public class TestQuestServlet extends HttpServlet {
         Integer buttonID = 0;
 //        Integer patience = model.getUserPatience(user);
         Integer patienceZulu = model.getUserPatience(user);
-        if (req.getParameter("param") != null) {
-            buttonID = Integer.parseInt(req.getParameter("param"));
+        if (req.getParameter("paramClick") != null) {
+            buttonID = Integer.parseInt(req.getParameter("paramClick"));
         }
-        if (req.getParameter("param2") != null) {
-            patienceZulu = Integer.parseInt(req.getParameter("param2"));
+        if (req.getParameter("paramHiddenPatience") != null) {
+            patienceZulu = Integer.parseInt(req.getParameter("paramHiddenPatience"));
         }
 
         Integer testKey = model.getUserTestKey(user);
@@ -72,7 +72,7 @@ public class TestQuestServlet extends HttpServlet {
         requestDispatcher.forward(req, resp);
     }
 
-    Integer convertButtonID(Integer id) {
+    private Integer convertButtonID(Integer id) {
         int pow = id / 10;
         int multiplier = id % 10;
         return (int) (multiplier * Math.pow(10, pow));
